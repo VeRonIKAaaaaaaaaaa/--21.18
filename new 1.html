@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">//Скрипт для перевірки правильності паролів
+    function validateForm(){
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      if (password !== confirmPassword) {
+        alert("Паролі не співпадають!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <meta charset="utf-8">
+  <style> /*Настройка стилів*/
+    h1{
+      color: #D2B48C;
+    }
+    table{
+      border-collapse: collapse;
+    }
+    td{
+          border: 2px black solid;
+          height: 51px;
+          width: 95px;
+    }
+    aside{
+      float: right;
+      background: #DEB887;
+      border: 2px solid black;
+      
+    }
+  </style>
+</head>
+<header>
+  <center><!-- Заголовок і зображення шапки сайту -->
+    <h1>Розклад занять С21</h1>
+    <img src="https://kpi.ua/images/iszzi.png">
+  </center>
+</header>
+<body bgcolor="#FFE4c4">
+  <title>Розклад занять С-21</title><!-- Заголовок сторінки -->
+  <aside>
+    <h3>Форма реєстрації</h3>
+    <form action="/submit" method="post" onsubmit="return validateForm();">
+      <!-- Поля вводу для ім'я, призвіще, email, пароль та підтвердження паролю -->
+      <label for="name">Ім'я</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="surname">Призвіще</label>
+      <input type="text" id="surname" name="surname" required><br><br>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <label for="confirmPassword">Підтвердити пароль</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+      <input type="submit" value="Зареєструватися"><!-- Кнопка для відправки форми -->
+    </form>
+  </aside>
+  <center>
+    <table bgcolor="#DEB887"><!-- Таблиця розкладу занять -->
+      <tr>
+        <td>Час</td>
+        <td>Понеділок</td>
+        <td>Вівторок</td>
+        <td>Середа</td>
+        <td>Четвер</td>
+        <td>П'ятниця</td>
+        <td>Субота</td>
+      </tr>
+      <tr>
+        <td>08:30-09:15 09:20-10:05</td>
+        <td>ФВ</td>
+        <td>ІМ</td>
+        <td>ЗВП</td>
+        <td>ФВ</td>
+        <td>ФВ</td>
+        <td>СР</td>
+      </tr>
+      <tr>
+        <td>10:25-11:10 11:15-12:00</td>
+        <td>ЗВП</td>
+        <td>Право</td>
+        <td>ЗВП</td>
+        <td>Право</td>
+        <td>ТІМ</td>
+        <td>СР</td>
+      </tr>
+      <tr>
+        <td>12:10-13:05 13:10-13:55</td>
+        <td>ТС</td>
+        <td>ТІК</td>
+        <td>Прога</td>
+        <td>ТС</td>
+        <td>ТІМ</td>
+        <td>СР</td>
+      </tr>
+      <tr>
+        <td>16:10-16:55 17:00-17:45</td>
+        <td>СР</td>
+        <td>СР</td>
+        <td>СР</td>
+        <td>Прога</td>
+        <td>СР</td>
+        <td>СР</td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
